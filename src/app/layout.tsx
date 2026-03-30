@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+        <meta name="facebook-domain-verification" content="2ghwwkxpwyqs9e5kyhu9dai0gbiq6m" />
         <Script id="gtm" strategy="afterInteractive">{`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
