@@ -23,11 +23,11 @@ export default function StickyCTA() {
   return (
     <div className={`sticky-cta${visible ? ' sticky-cta--visible' : ''}`}>
       <TrackedLink
-        href="/contact/"
+        href="/download/"
         className="btn btn-primary sticky-cta__btn"
-        eventParams={{ form_type: 'contact', cta_location: 'sticky' }}
+        eventParams={{ form_type: 'download', cta_location: 'sticky' }}
       >
-        まずは問い合わせする
+        まずは無料で資料請求
       </TrackedLink>
     </div>
   );

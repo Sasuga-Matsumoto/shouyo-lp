@@ -29,11 +29,27 @@ export default function Header({ variant = 'top' }: { variant?: Variant }) {
         </ul>
       );
     }
-    // contact, thanks-contact, thanks-download, download, privacy
+    if (variant === 'download') {
+      return (
+        <ul className="header-nav">
+          <li><Link href="/">サービスサイト</Link></li>
+          <li><TrackedLink href="/contact/" className="btn btn-primary" style={{ padding: '10px 36px 10px 22px', fontSize: '0.82rem', color: 'white', backgroundPosition: 'right 14px center' }} eventParams={{ form_type: 'contact', cta_location: 'header' }}>お問い合わせ</TrackedLink></li>
+        </ul>
+      );
+    }
+    if (variant === 'thanks-download') {
+      return (
+        <ul className="header-nav">
+          <li><Link href="/">サービスサイト</Link></li>
+          <li><TrackedLink href="/contact/" className="btn btn-primary" style={{ padding: '10px 36px 10px 22px', fontSize: '0.82rem', color: 'white', backgroundPosition: 'right 14px center' }} eventParams={{ form_type: 'contact', cta_location: 'header' }}>お問い合わせ</TrackedLink></li>
+        </ul>
+      );
+    }
+    // contact, thanks-contact, privacy
     return (
       <ul className="header-nav">
         <li><Link href="/">サービスサイト</Link></li>
-        <li><TrackedLink href="/contact/" className="btn btn-primary" style={{ padding: '10px 22px 10px 22px', paddingRight: '40px', fontSize: '0.82rem', color: 'white' }} eventParams={{ form_type: 'contact', cta_location: 'header' }}>お問い合わせ</TrackedLink></li>
+        <li><TrackedLink href="/download/" className="btn btn-primary" style={{ padding: '10px 36px 10px 22px', fontSize: '0.82rem', color: 'white', backgroundPosition: 'right 14px center' }} eventParams={{ form_type: 'download', cta_location: 'header' }}>資料請求</TrackedLink></li>
       </ul>
     );
   };
@@ -46,10 +62,27 @@ export default function Header({ variant = 'top' }: { variant?: Variant }) {
         </div>
       );
     }
+    if (variant === 'download') {
+      return (
+        <div className={`mobile-menu${isOpen ? ' active' : ''}`}>
+          <Link href="/" onClick={closeMenu}>サービスサイト</Link>
+          <TrackedLink href="/contact/" onClick={closeMenu} eventParams={{ form_type: 'contact', cta_location: 'header_mobile' }}>お問い合わせ</TrackedLink>
+        </div>
+      );
+    }
+    if (variant === 'thanks-download') {
+      return (
+        <div className={`mobile-menu${isOpen ? ' active' : ''}`}>
+          <Link href="/" onClick={closeMenu}>サービスサイト</Link>
+          <TrackedLink href="/contact/" onClick={closeMenu} eventParams={{ form_type: 'contact', cta_location: 'header_mobile' }}>お問い合わせ</TrackedLink>
+        </div>
+      );
+    }
+    // contact, thanks-contact, privacy
     return (
       <div className={`mobile-menu${isOpen ? ' active' : ''}`}>
         <Link href="/" onClick={closeMenu}>サービスサイト</Link>
-        <TrackedLink href="/contact/" onClick={closeMenu} eventParams={{ form_type: 'contact', cta_location: 'header_mobile' }}>お問い合わせ</TrackedLink>
+        <TrackedLink href="/download/" onClick={closeMenu} eventParams={{ form_type: 'download', cta_location: 'header_mobile' }}>資料請求</TrackedLink>
       </div>
     );
   };

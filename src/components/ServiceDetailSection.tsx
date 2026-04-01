@@ -33,7 +33,7 @@ export default function ServiceDetailSection() {
 
         <FadeIn className="mid-cta">
           <div className="cta-group">
-            <TrackedLink href="/contact/" className="btn btn-primary" eventParams={{ form_type: 'contact', cta_location: 'service_detail' }}>まずは問い合わせする</TrackedLink>
+            <TrackedLink href="/download/" className="btn btn-primary" eventParams={{ form_type: 'download', cta_location: 'service_detail' }}>まずは無料で資料請求</TrackedLink>
           </div>
         </FadeIn>
       </div>

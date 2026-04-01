@@ -1,4 +1,4 @@
-const GAS_URL = 'https://script.google.com/macros/s/YOUR_SHOUYO_GAS_ENDPOINT/exec';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyIL5oteW-c2mYrut1TzGfWFWJ1znx_UnSWY1ilVycgux9UW923gojHMEy9p-UVoQlIVA/exec';
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'] as const;
 const UTM_STORAGE_KEY = 'utm_params';

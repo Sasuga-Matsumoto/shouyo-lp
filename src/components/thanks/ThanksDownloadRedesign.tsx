@@ -1,3 +1,5 @@
+import ScheduleButton from '@/src/components/ScheduleButton';
+
 export default function ThanksDownloadRedesign() {
   return (
     <section className="thanks-section">
@@ -10,6 +12,11 @@ export default function ThanksDownloadRedesign() {
           <h1 className="thanks-title">資料をお送りしました</h1>
 
           <p className="thanks-message">PLEX社保最適化は、役員報酬の構成を最適化し、<br />年収を変えずに社会保険料を<strong>平均50%削減</strong>するサービスです。</p>
+
+          <div className="thanks-schedule">
+            <p className="thanks-schedule-text">30分程度のオンライン説明で、サービスの全体像をお伝えします</p>
+            <ScheduleButton label="空き日程を見る" formType="download" />
+          </div>
 
           <div className="thanks-divider"></div>
 
