@@ -22,7 +22,7 @@ export default function ThanksContactRedesign() {
 
           <div className="thanks-features">
             <div className="thanks-feature-item">
-              <div className="thanks-feature-number"><span style={{ fontSize: '0.9rem' }}>最大</span>55<span style={{ fontSize: '0.9rem' }}>%</span></div>
+              <div className="thanks-feature-number"><span style={{ fontSize: '0.9rem' }}>平均</span>50<span style={{ fontSize: '0.9rem' }}>%</span></div>
               <div className="thanks-feature-label">社保料削減</div>
             </div>
             <div className="thanks-feature-item">
