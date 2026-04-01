@@ -11,7 +11,7 @@ interface FormErrors {
   firstName?: string;
   email?: string;
   phone?: string;
-  annualIncome?: string;
+  employees?: string;
   position?: string;
   inquiry?: string;
   referralSource?: string;
@@ -80,8 +80,8 @@ export default function ContactForm() {
       newErrors.phone = '正しい電話番号を入力してください';
     }
 
-    const annualIncome = (form.elements.namedItem('annualIncome') as HTMLSelectElement).value;
-    if (!annualIncome) newErrors.annualIncome = '現在の年収を選択してください';
+    const employees = (form.elements.namedItem('employees') as HTMLSelectElement).value;
+    if (!employees) newErrors.employees = '従業員数を選択してください';
 
     const position = (form.elements.namedItem('position') as HTMLInputElement).value.trim();
     if (!position) newErrors.position = '役職を入力してください';
@@ -115,7 +115,7 @@ export default function ContactForm() {
       firstName: (form.elements.namedItem('firstName') as HTMLInputElement).value.trim(),
       email: (form.elements.namedItem('email') as HTMLInputElement).value.trim(),
       phone: (form.elements.namedItem('phone') as HTMLInputElement).value.trim(),
-      annualIncome: (form.elements.namedItem('annualIncome') as HTMLSelectElement).value || '',
+      employees: (form.elements.namedItem('employees') as HTMLSelectElement).value || '',
       position: (form.elements.namedItem('position') as HTMLInputElement).value.trim() || '',
       inquiry: (form.elements.namedItem('inquiry') as HTMLTextAreaElement).value.trim(),
       referralSource: (form.elements.namedItem('referralSource') as HTMLSelectElement).value || '',
@@ -183,19 +183,17 @@ export default function ContactForm() {
                 </div>
 
                 <div className="input-group">
-                  <label htmlFor="annualIncome">現在の年収<span className="required">必須</span></label>
-                  <select id="annualIncome" name="annualIncome" className={errors.annualIncome ? 'input-error' : ''} required>
+                  <label htmlFor="employees">従業員数<span className="required">必須</span></label>
+                  <select id="employees" name="employees" className={errors.employees ? 'input-error' : ''} required>
                     <option value="">選択してください</option>
-                    <option value="600万円未満">600万円未満</option>
-                    <option value="600万〜800万円">600万〜800万円</option>
-                    <option value="800万〜1,000万円">800万〜1,000万円</option>
-                    <option value="1,000万〜1,200万円">1,000万〜1,200万円</option>
-                    <option value="1,200万〜1,500万円">1,200万〜1,500万円</option>
-                    <option value="1,500万〜2,000万円">1,500万〜2,000万円</option>
-                    <option value="2,000万〜3,000万円">2,000万〜3,000万円</option>
-                    <option value="3,000万円以上">3,000万円以上</option>
+                    <option value="1-10">1〜10名</option>
+                    <option value="11-30">11〜30名</option>
+                    <option value="31-50">31〜50名</option>
+                    <option value="51-100">51〜100名</option>
+                    <option value="101-300">101〜300名</option>
+                    <option value="301+">301名以上</option>
                   </select>
-                  <div className="inline-error">{errors.annualIncome || ''}</div>
+                  <div className="inline-error">{errors.employees || ''}</div>
                 </div>
 
                 <div className="input-group">
