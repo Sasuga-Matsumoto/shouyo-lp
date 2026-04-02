@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import Header from '@/src/components/Header';
 import HeroSection from '@/src/components/HeroSection';
 import MeritSection from '@/src/components/MeritSection';
