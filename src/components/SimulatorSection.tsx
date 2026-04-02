@@ -38,7 +38,8 @@ function lookupIns(salary: number) {
 }
 
 const PENSION_RATE = 0.183;
-const HEALTH_RATE = 0.0988; // Tokyo Association rate (combined)
+const HEALTH_RATE = 0.099; // Tokyo Association rate (combined, 9.90%)
+const EMPLOYMENT_RATE = 0.006; // 雇用保険料率 0.60%
 const PENSION_BONUS_CAP = 1500000;
 const HEALTH_BONUS_CAP = 5730000;
 
@@ -74,20 +75,23 @@ export default function SimulatorSection() {
     const beforeBonus = 0;
     const beforeIns = lookupIns(beforeMonthly);
     // SST health/pension values are per-person (half). Company and personal pay the same.
-    const beforeCompany = (beforeIns.health + beforeIns.pension) * 12;
+    const beforeEmployment = beforeMonthly * EMPLOYMENT_RATE;
+    const beforeCompany = (beforeIns.health + beforeIns.pension + beforeEmployment) * 12;
     const beforePersonal = beforeCompany; // same amount
 
     // After: monthly 100,000, rest as bonus (once per year)
     const afterMonthly = 100000;
     const afterBonus = income - afterMonthly * 12;
     const afterIns = lookupIns(afterMonthly);
-    const afterMonthlyCompany = (afterIns.health + afterIns.pension) * 12;
+    const afterEmployment = afterMonthly * EMPLOYMENT_RATE;
+    const afterMonthlyCompany = (afterIns.health + afterIns.pension + afterEmployment) * 12;
     const afterMonthlyPersonal = afterMonthlyCompany;
     // Bonus: half rate each for company and personal
     const bonusPensionHalf = Math.min(afterBonus, PENSION_BONUS_CAP) * PENSION_RATE / 2;
     const bonusHealthHalf = Math.min(afterBonus, HEALTH_BONUS_CAP) * HEALTH_RATE / 2;
-    const afterCompany = afterMonthlyCompany + bonusPensionHalf + bonusHealthHalf;
-    const afterPersonal = afterMonthlyPersonal + bonusPensionHalf + bonusHealthHalf;
+    const bonusEmployment = afterBonus * EMPLOYMENT_RATE;
+    const afterCompany = afterMonthlyCompany + bonusPensionHalf + bonusHealthHalf + bonusEmployment;
+    const afterPersonal = afterMonthlyPersonal + bonusPensionHalf + bonusHealthHalf + bonusEmployment;
 
     const companyReduction = beforeCompany - afterCompany;
     const personalReduction = beforePersonal - afterPersonal;
