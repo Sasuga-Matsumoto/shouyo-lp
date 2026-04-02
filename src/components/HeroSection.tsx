@@ -6,7 +6,7 @@ export default function HeroSection() {
       <div className="hero-glow"></div>
       <div className="inner">
         <div className="hero-label">PLEX INSURANCE OPTIMIZATION</div>
-        <h1 className="hero-title">年収を変えずに<br />社会保険料を年間143万円削減</h1>
+        <h1 className="hero-title">年収を変えずに<br />社会保険料を年間142万円削減</h1>
         <div className="hero-sub-pitch">
           <span>否認リスク保証付き</span>
           <span>届出・管理すべてお任せ</span>

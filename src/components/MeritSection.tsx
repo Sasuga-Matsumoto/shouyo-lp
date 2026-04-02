@@ -15,7 +15,7 @@ export default function MeritSection() {
             <div className="merit-block-label">経営者のメリット</div>
             <div className="merit-card card-employee">
               <h3>年収そのまま、<br />手取りが年間100万円増える</h3>
-              <p>月額報酬と賞与の構成を最適化するだけで、総額は同じなのに社会保険料が大幅に下がります。年収1,200万円の役員なら年間約143万円の保険料削減が見込めます。</p>
+              <p>月額報酬と賞与の構成を最適化するだけで、総額は同じなのに社会保険料が大幅に下がります。年収1,200万円の役員なら年間約142万円の保険料削減が見込めます。</p>
             </div>
           </FadeIn>
           <FadeIn delay={2}>
