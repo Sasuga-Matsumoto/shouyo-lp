@@ -140,11 +140,29 @@ export default function DownloadForm() {
         </div>
       </section>
 
-      <section className="contact-section">
-        <div className="contact-inner">
+      <section className="download-section">
+        <div className="download-inner">
           <FadeIn>
+            <div className="doc-info-card">
+              <div className="doc-label">SERVICE DOCUMENT</div>
+              <h2>3分でわかる！<br />PLEX 社保最適化<br />サービス資料</h2>
+              <p className="doc-desc">社会保険料最適化の仕組みから削減効果の概算例、導入イメージまでを分かりやすくまとめた資料です。</p>
+              <div className="doc-contents">
+                <h3>主な内容</h3>
+                <ul>
+                  <li>社保最適化の概要と削減の仕組み</li>
+                  <li>削減効果の概算例</li>
+                  <li>導入・運用イメージ</li>
+                  <li>否認保証（SLA）</li>
+                  <li>料金プラン</li>
+                </ul>
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn className="form-column">
             <div className="form-card">
-              <div className="form-card-title">以下のフォームにご記入ください</div>
+              <div className="form-card-title">30秒で今すぐダウンロード！</div>
               <form ref={formRef} onSubmit={handleSubmit} noValidate>
 
                 <div className="input-group">
