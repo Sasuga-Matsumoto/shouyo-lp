@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Header from '@/src/components/Header';
 import ContactForm from '@/src/components/ContactForm';
+import FormStartTracker from '@/src/components/FormStartTracker';
 
 export const metadata: Metadata = {
   title: 'お問い合わせ | PLEX 社保最適化',
@@ -11,6 +12,7 @@ export default function ContactPage() {
   return (
     <>
       <Header variant="contact" />
+      <FormStartTracker formType="contact" />
       <ContactForm />
     </>
   );
