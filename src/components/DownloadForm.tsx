@@ -148,7 +148,7 @@ export default function DownloadForm() {
               <div className="doc-label">SERVICE DOCUMENT</div>
               <h2>3分でわかる！<br />PLEX 社保最適化<br />サービス資料</h2>
               <div className="doc-thumbs">
-                <Image src="/doc_thumb_flow.png" alt="サービス概要" width={460} height={259} loading="lazy" />
+                <Image src="/doc_thumb_flow.png" alt="導入時のメリット" width={460} height={259} loading="lazy" />
                 <Image src="/doc_thumb_merit.png" alt="月額vs賞与の社会保険料比較" width={460} height={259} loading="lazy" />
               </div>
               <p className="doc-desc">社会保険料最適化の仕組みから削減効果の概算例、導入イメージまでを分かりやすくまとめた資料です。</p>
@@ -159,7 +159,6 @@ export default function DownloadForm() {
                   <li>削減効果の概算例</li>
                   <li>導入・運用イメージ</li>
                   <li>否認補償（SLA）</li>
-                  <li>料金プラン</li>
                 </ul>
               </div>
             </div>
