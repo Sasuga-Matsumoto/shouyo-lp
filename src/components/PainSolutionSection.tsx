@@ -51,7 +51,7 @@ export default function PainSolutionSection() {
             </div>
             <div className="solution-card">
               <div className="solution-num">03</div>
-              <h4>業界唯一の<br />否認リスク保証</h4>
+              <h4>業界唯一の<br />否認リスク補償</h4>
               <p>万が一年金事務所から否認された場合、差額保険料と延滞金を全額当社が負担します。</p>
             </div>
           </div>

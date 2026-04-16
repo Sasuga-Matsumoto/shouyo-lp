@@ -31,7 +31,7 @@ export default function ThanksDownloadRedesign() {
             </div>
             <div className="thanks-feature-item">
               <div className="thanks-feature-number">100<span style={{ fontSize: '0.9rem' }}>%</span></div>
-              <div className="thanks-feature-label">否認リスク保証</div>
+              <div className="thanks-feature-label">否認リスク補償</div>
             </div>
           </div>
 

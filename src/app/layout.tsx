@@ -6,7 +6,7 @@ import UtmCapture from '@/src/components/UtmCapture';
 
 export const metadata: Metadata = {
   title: 'PLEX 社保最適化 | 年収を変えずに社会保険料を大幅削減するフルマネージドサービス',
-  description: 'PLEX社保最適化は、役員報酬の構成を最適化し、年収を変えずに社会保険料を平均50%削減するフルマネージドSaaSです。シミュレーションから届出管理・否認リスク保証まで一括提供。',
+  description: 'PLEX社保最適化は、役員報酬の構成を最適化し、年収を変えずに社会保険料を平均50%削減するフルマネージドSaaSです。シミュレーションから届出管理・否認リスク補償まで一括提供。',
   other: {
     'theme-color': '#1E3A8A',
   },

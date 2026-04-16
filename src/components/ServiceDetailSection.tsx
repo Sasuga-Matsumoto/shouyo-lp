@@ -6,7 +6,7 @@ const services = [
   { num: '02', title: '届出書類の自動生成', desc: '株主総会議事録、事前確定届出給与の届出、月額変更届など、必要書類を自動で作成します。', delay: 1 },
   { num: '03', title: 'e-Gov電子申請', desc: '届出の電子申請もお任せください。面倒な手続きを代わりに進めるので、お客様が役所に行く必要はありません。', delay: 2 },
   { num: '04', title: '年次サイクル管理', desc: '毎年1月に翌期の再シミュレーション。届出期限のリマインド、法改正への自動対応を行います。', delay: 0 },
-  { num: '05', title: '否認リスク保証（SLA）', desc: '当社スキームに基づく運用で否認された場合、差額保険料＋延滞金を全額負担する損害賠償型SLAです。', delay: 1 },
+  { num: '05', title: '否認リスク補償（SLA）', desc: '当社スキームに基づく運用で否認された場合、差額保険料＋延滞金を全額負担する損害賠償型SLAです。', delay: 1 },
 ];
 
 export default function ServiceDetailSection() {
@@ -16,7 +16,7 @@ export default function ServiceDetailSection() {
         <FadeIn className="section-center">
           <div className="section-label">SERVICE</div>
           <h2 className="section-title">契約1本・窓口1つで、すべてお任せ</h2>
-          <p className="section-desc">シミュレーションから届出、電子申請、否認リスク保証まで。面倒な手続きはすべてお任せください。</p>
+          <p className="section-desc">シミュレーションから届出、電子申請、否認リスク補償まで。面倒な手続きはすべてお任せください。</p>
         </FadeIn>
 
         <div className="service-grid">
