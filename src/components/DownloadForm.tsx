@@ -158,7 +158,6 @@ export default function DownloadForm() {
                   <li>社保最適化の概要と削減の仕組み</li>
                   <li>削減効果の概算例</li>
                   <li>導入・運用イメージ</li>
-                  <li>否認補償（SLA）</li>
                 </ul>
               </div>
             </div>
