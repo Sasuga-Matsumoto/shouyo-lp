@@ -22,16 +22,16 @@ export default function ThanksDownloadRedesign() {
 
           <div className="thanks-features">
             <div className="thanks-feature-item">
-              <div className="thanks-feature-number"><span style={{ fontSize: '0.9rem' }}>平均</span>50<span style={{ fontSize: '0.9rem' }}>%</span></div>
-              <div className="thanks-feature-label">社保料削減</div>
+              <div className="thanks-feature-number">会社負担削減</div>
+              <div className="thanks-feature-desc">社保の会社負担と税金を削減</div>
             </div>
             <div className="thanks-feature-item">
-              <div className="thanks-feature-number">2~3<span style={{ fontSize: '0.9rem' }}>回</span></div>
-              <div className="thanks-feature-label">年間の承認回数</div>
+              <div className="thanks-feature-number">複数リスクケア</div>
+              <div className="thanks-feature-desc">複数観点の対策サンプルをご提供</div>
             </div>
             <div className="thanks-feature-item">
-              <div className="thanks-feature-number">100<span style={{ fontSize: '0.9rem' }}>%</span></div>
-              <div className="thanks-feature-label">否認リスク補償</div>
+              <div className="thanks-feature-number">お手間なし</div>
+              <div className="thanks-feature-desc">導入から運用まで雛形を一式ご提供</div>
             </div>
           </div>
 

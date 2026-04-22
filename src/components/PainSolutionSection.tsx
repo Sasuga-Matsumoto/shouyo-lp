@@ -14,15 +14,15 @@ export default function PainSolutionSection() {
           <div className="pain-cards">
             <div className="pain-card">
               <div className="pain-icon">!</div>
-              <p>社会保険料が高すぎて<br />手取りが少ないと感じている</p>
+              <p>社会保険料の負担が重いが<br />削減手段が限られている</p>
             </div>
             <div className="pain-card">
               <div className="pain-icon">!</div>
-              <p>最適化したいが自分で<br />調整するのは面倒で不安</p>
+              <p>社保最適化を始めたいが<br />手間がかかりすぎて手が回らない</p>
             </div>
             <div className="pain-card">
               <div className="pain-icon">!</div>
-              <p>コンサルに頼んでも<br />否認リスクは自己責任</p>
+              <p>最適化を検討しても<br />リスクが曖昧で踏み切れない</p>
             </div>
           </div>
         </FadeIn>
@@ -46,13 +46,13 @@ export default function PainSolutionSection() {
             </div>
             <div className="solution-card">
               <div className="solution-num">02</div>
-              <h4>年収と会社情報を<br />渡すだけ</h4>
-              <p>シミュレーションから届出、電子申請、年次管理まですべてお任せ。お客様の手間はほぼゼロです。</p>
+              <h4>報酬設計から運用フローまで<br />フルサポート</h4>
+              <p>報酬設計、議事録・届出書類、運用フロー、証拠管理まで網羅的に雛形提供。</p>
             </div>
             <div className="solution-card">
               <div className="solution-num">03</div>
-              <h4>業界唯一の<br />否認リスク補償</h4>
-              <p>万が一年金事務所から否認された場合、差額保険料と延滞金を全額当社が負担します。</p>
+              <h4>複数リスクをケア</h4>
+              <p>報酬構成変更の目的設定、報酬額の設定背景、議事録の記載内容、運用時の留意点まで、複数観点の対策サンプルをパッケージで提供します。</p>
             </div>
           </div>
         </FadeIn>

@@ -1,12 +1,43 @@
 import FadeIn from './FadeIn';
 import TrackedLink from '@/src/components/TrackedLink';
 
-const services = [
-  { num: '01', title: '最適配分シミュレーション', desc: '年収・役員構成から最適な月額/賞与バランスを自動算出。将来年金への影響も含めてシミュレーションします。', delay: 0 },
-  { num: '02', title: '届出書類の自動生成', desc: '株主総会議事録、事前確定届出給与の届出、月額変更届など、必要書類を自動で作成します。', delay: 1 },
-  { num: '03', title: 'e-Gov電子申請', desc: '届出の電子申請もお任せください。面倒な手続きを代わりに進めるので、お客様が役所に行く必要はありません。', delay: 2 },
-  { num: '04', title: '年次サイクル管理', desc: '毎年1月に翌期の再シミュレーション。届出期限のリマインド、法改正への自動対応を行います。', delay: 0 },
-  { num: '05', title: '否認リスク補償（SLA）', desc: '当社スキームに基づく運用で否認された場合、差額保険料＋延滞金を全額負担する損害賠償型SLAです。', delay: 1 },
+const services: { num: string; title: string; desc: string; delay: number }[] = [
+  {
+    num: '01',
+    title: '借上社宅の導入・運用支援',
+    desc: '会社が住居を借上げ、役員・従業員へ社宅として貸与。社保等級・所得税負担を最適化します。',
+    delay: 0,
+  },
+  {
+    num: '02',
+    title: '出張旅費日当の最大化',
+    desc: '出張旅費規程の雛形と運用フローをご提供し、日当・宿泊費の非課税枠を最大限活用できる状態をサポートします。',
+    delay: 1,
+  },
+  {
+    num: '03',
+    title: '役員報酬の構成最適化',
+    desc: '給与／賞与／退職金の構成を見直し、社保・税負担を合法的に軽減します。',
+    delay: 2,
+  },
+  {
+    num: '04',
+    title: '残業食事規程の整備支援',
+    desc: '残業時の食事支給を非課税で運用するための規程の雛形と運用フローをご提供します。',
+    delay: 0,
+  },
+  {
+    num: '05',
+    title: '食事補助の導入・運用支援',
+    desc: 'チケット型・現物支給型の福利厚生で、月3,500円までの非課税枠を活用します。',
+    delay: 1,
+  },
+  {
+    num: '06',
+    title: '企業型DBの導入・運用支援',
+    desc: 'はぐくみ等の選択制企業年金を導入。社保等級下げ＋退職金準備を同時に実現します。',
+    delay: 2,
+  },
 ];
 
 export default function ServiceDetailSection() {
@@ -15,8 +46,8 @@ export default function ServiceDetailSection() {
       <div className="inner">
         <FadeIn className="section-center">
           <div className="section-label">SERVICE</div>
-          <h2 className="section-title">契約1本・窓口1つで、すべてお任せ</h2>
-          <p className="section-desc">シミュレーションから届出、電子申請、否認リスク補償まで。面倒な手続きはすべてお任せください。</p>
+          <h2 className="section-title">導入から運用まで、網羅的にサポート</h2>
+          <p className="section-desc">規程整備、決議書類、各種届出、月次運用、証拠保管まで、必要な雛形一式をPLEXがご提供します。</p>
         </FadeIn>
 
         <div className="service-grid">

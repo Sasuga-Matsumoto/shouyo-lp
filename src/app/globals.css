@@ -1340,17 +1340,22 @@ body {
 }
 .thanks-feature-number {
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 1.5rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  color: var(--bright-blue);
-  line-height: 1.2;
-  margin-bottom: 4px;
+  color: var(--dark-blue);
+  line-height: 1.3;
+  margin-bottom: 6px;
 }
 .thanks-feature-label {
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--dark-blue);
   margin-bottom: 4px;
+}
+.thanks-feature-desc {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  line-height: 1.5;
 }
 .thanks-schedule {
   margin-bottom: 24px;
