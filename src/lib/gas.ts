@@ -1,4 +1,4 @@
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbyIL5oteW-c2mYrut1TzGfWFWJ1znx_UnSWY1ilVycgux9UW923gojHMEy9p-UVoQlIVA/exec';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyTfuovkOOe_eHKnMqOrrYDme0pf7trsV5nzAOhkhG4jPVhx4bRHKQOFI962VPa80Iy/exec';
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'] as const;
 const UTM_STORAGE_KEY = 'utm_params';
@@ -41,6 +41,6 @@ export async function submitToGAS(data: Record<string, string>): Promise<void> {
     method: 'POST',
     mode: 'no-cors',
     headers: { 'Content-Type': 'text/plain' },
-    body: JSON.stringify(data),
+    body: JSON.stringify({ ...data, service: 'shouyo' }),
   });
 }
