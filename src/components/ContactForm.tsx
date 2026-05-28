@@ -144,13 +144,6 @@ export default function ContactForm() {
 
   return (
     <>
-      <section className="page-hero">
-        <div className="inner">
-          <div className="page-hero-label">CONTACT</div>
-          <h1>お問い合わせ</h1>
-        </div>
-      </section>
-
       <section className="contact-section">
         <div className="contact-inner">
           <FadeIn>

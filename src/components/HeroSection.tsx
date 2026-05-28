@@ -1,6 +1,13 @@
+'use client';
+
 import TrackedLink from '@/src/components/TrackedLink';
+import { useABVariant } from '@/src/lib/use-ab-variant';
 
 export default function HeroSection() {
+  // contact-direct-calendar の calendar variant のみ「無料で相談する」CTAをヒーローに追加
+  const abVariant = useABVariant('contact-direct-calendar');
+  const showContactCta = abVariant === 'calendar';
+
   return (
     <section className="hero">
       <div className="hero-glow"></div>
@@ -14,6 +21,15 @@ export default function HeroSection() {
         </div>
         <div className="cta-group">
           <TrackedLink href="/download/" className="btn btn-primary" eventParams={{ form_type: 'download', cta_location: 'hero' }}>まずは無料で資料請求</TrackedLink>
+          {showContactCta && (
+            <TrackedLink
+              href="/contact/"
+              className="btn btn-outline-blue hero-contact"
+              eventParams={{ form_type: 'contact', cta_location: 'hero' }}
+            >
+              無料で相談する
+            </TrackedLink>
+          )}
         </div>
       </div>
     </section>

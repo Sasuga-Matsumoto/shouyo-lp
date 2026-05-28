@@ -2,12 +2,16 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import TrackedLink from '@/src/components/TrackedLink';
+import { useABVariant } from '@/src/lib/use-ab-variant';
 
 type Variant = 'top' | 'contact' | 'download' | 'thanks-contact' | 'thanks-download' | 'privacy';
 
 export default function Header({ variant = 'top' }: { variant?: Variant }) {
   const [isOpen, setIsOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
+  // contact-direct-calendar A/Bテストの variant に応じて CTA テキストを切替
+  const abVariant = useABVariant('contact-direct-calendar');
+  const contactCtaText = abVariant === 'calendar' ? '無料で相談する' : 'お問い合わせ';
 
   useEffect(() => {
     function handleClick(e: MouseEvent) {
@@ -25,7 +29,7 @@ export default function Header({ variant = 'top' }: { variant?: Variant }) {
     if (variant === 'top') {
       return (
         <ul className="header-nav">
-          <li><TrackedLink href="/contact/" eventParams={{ form_type: 'contact', cta_location: 'header' }}>お問い合わせ</TrackedLink></li>
+          <li><TrackedLink href="/contact/" eventParams={{ form_type: 'contact', cta_location: 'header' }}>{contactCtaText}</TrackedLink></li>
         </ul>
       );
     }
@@ -33,7 +37,7 @@ export default function Header({ variant = 'top' }: { variant?: Variant }) {
       return (
         <ul className="header-nav">
           <li><Link href="/">サービスサイト</Link></li>
-          <li><TrackedLink href="/contact/" className="btn btn-primary" style={{ padding: '10px 36px 10px 22px', fontSize: '0.82rem', color: 'white', backgroundPosition: 'right 14px center' }} eventParams={{ form_type: 'contact', cta_location: 'header' }}>お問い合わせ</TrackedLink></li>
+          <li><TrackedLink href="/contact/" className="btn btn-primary" style={{ padding: '10px 36px 10px 22px', fontSize: '0.82rem', color: 'white', backgroundPosition: 'right 14px center' }} eventParams={{ form_type: 'contact', cta_location: 'header' }}>{contactCtaText}</TrackedLink></li>
         </ul>
       );
     }
@@ -41,7 +45,7 @@ export default function Header({ variant = 'top' }: { variant?: Variant }) {
       return (
         <ul className="header-nav">
           <li><Link href="/">サービスサイト</Link></li>
-          <li><TrackedLink href="/contact/" className="btn btn-primary" style={{ padding: '10px 36px 10px 22px', fontSize: '0.82rem', color: 'white', backgroundPosition: 'right 14px center' }} eventParams={{ form_type: 'contact', cta_location: 'header' }}>お問い合わせ</TrackedLink></li>
+          <li><TrackedLink href="/contact/" className="btn btn-primary" style={{ padding: '10px 36px 10px 22px', fontSize: '0.82rem', color: 'white', backgroundPosition: 'right 14px center' }} eventParams={{ form_type: 'contact', cta_location: 'header' }}>{contactCtaText}</TrackedLink></li>
         </ul>
       );
     }
@@ -58,7 +62,7 @@ export default function Header({ variant = 'top' }: { variant?: Variant }) {
     if (variant === 'top') {
       return (
         <div className={`mobile-menu${isOpen ? ' active' : ''}`}>
-          <TrackedLink href="/contact/" onClick={closeMenu} eventParams={{ form_type: 'contact', cta_location: 'header_mobile' }}>お問い合わせ</TrackedLink>
+          <TrackedLink href="/contact/" onClick={closeMenu} eventParams={{ form_type: 'contact', cta_location: 'header_mobile' }}>{contactCtaText}</TrackedLink>
         </div>
       );
     }
@@ -66,7 +70,7 @@ export default function Header({ variant = 'top' }: { variant?: Variant }) {
       return (
         <div className={`mobile-menu${isOpen ? ' active' : ''}`}>
           <Link href="/" onClick={closeMenu}>サービスサイト</Link>
-          <TrackedLink href="/contact/" onClick={closeMenu} eventParams={{ form_type: 'contact', cta_location: 'header_mobile' }}>お問い合わせ</TrackedLink>
+          <TrackedLink href="/contact/" onClick={closeMenu} eventParams={{ form_type: 'contact', cta_location: 'header_mobile' }}>{contactCtaText}</TrackedLink>
         </div>
       );
     }
@@ -74,7 +78,7 @@ export default function Header({ variant = 'top' }: { variant?: Variant }) {
       return (
         <div className={`mobile-menu${isOpen ? ' active' : ''}`}>
           <Link href="/" onClick={closeMenu}>サービスサイト</Link>
-          <TrackedLink href="/contact/" onClick={closeMenu} eventParams={{ form_type: 'contact', cta_location: 'header_mobile' }}>お問い合わせ</TrackedLink>
+          <TrackedLink href="/contact/" onClick={closeMenu} eventParams={{ form_type: 'contact', cta_location: 'header_mobile' }}>{contactCtaText}</TrackedLink>
         </div>
       );
     }

@@ -1659,3 +1659,32 @@ body {
   padding-top: 8px;
 }
 
+/* ===== Page-hero variant additions (contact-direct-calendar A/Bテスト) ===== */
+.page-hero-lead {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  opacity: 0.92;
+}
+@media (min-width: 768px) {
+  .page-hero-lead { font-size: 1rem; }
+}
+.page-hero-arrow {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+  animation: page-hero-arrow-bounce 1.6s ease-in-out infinite;
+}
+.page-hero-arrow svg {
+  width: 30px;
+  height: 30px;
+  color: white;
+  opacity: 0.9;
+}
+@media (min-width: 768px) {
+  .page-hero-arrow svg { width: 36px; height: 36px; }
+}
+@keyframes page-hero-arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}

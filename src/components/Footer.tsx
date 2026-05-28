@@ -1,6 +1,13 @@
+'use client';
+
 import Link from 'next/link';
+import { useABVariant } from '@/src/lib/use-ab-variant';
 
 export default function Footer() {
+  // contact-direct-calendar A/Bテストに応じてフッターのリンク文言を切替
+  const abVariant = useABVariant('contact-direct-calendar');
+  const contactCtaText = abVariant === 'calendar' ? '無料で相談する' : 'お問い合わせ';
+
   return (
     <footer className="footer">
       <div className="footer-inner">
@@ -17,7 +24,7 @@ export default function Footer() {
             <ul className="footer-nav">
               <li><a href="https://plex.co.jp/" target="_blank" rel="noopener">運営会社情報</a></li>
               <li><Link href="/privacy/">個人情報保護方針</Link></li>
-              <li><Link href="/contact/">お問い合わせ</Link></li>
+              <li><Link href="/contact/">{contactCtaText}</Link></li>
             </ul>
           </div>
         </div>

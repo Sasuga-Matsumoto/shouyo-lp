@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+import { getActiveVariants } from '@/src/lib/ab-tests';
 import './calendar.css';
 
 /** GAS 側 SERVICES マップで定義しているサービスキー */
@@ -335,7 +336,16 @@ export default function CalendarBookingClient({
       });
       const json = (await res.json()) as BookResult;
       setBookResult(json);
-      if (json.success) fetchSlots(mode);
+      if (json.success) {
+        fetchSlots(mode);
+        // GA4: 予約完了イベント（A/Bテストや LP横断のCV計測用）
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'calendar_booking_complete',
+          service: service || 'shouyo',
+          ab_test_variant: getActiveVariants(),
+        });
+      }
     } catch (err) {
       setBookResult({ success: false, error: String(err) });
     } finally {
