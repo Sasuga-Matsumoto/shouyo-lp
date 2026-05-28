@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { getUtmParams, submitToGAS } from '@/src/lib/gas';
 import { scrollToFirstError } from '@/src/lib/form-utils';
 import { getActiveVariant } from '@/src/lib/ab-tests';
+import { saveCalendarPrefill } from '@/src/components/calendar/CalendarEmbed';
 
 interface FormErrors {
   company?: string;
@@ -123,6 +124,12 @@ export default function DownloadForm() {
 
     try {
       await submitToGAS(data);
+      saveCalendarPrefill({
+        name: `${data.lastName} ${data.firstName}`.trim(),
+        email: data.email,
+        phone: data.phone,
+        company: data.company,
+      });
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: 'form_submit', form_type: 'download', ab_test_variant: getActiveVariant() });
       router.push('/thanks-download/');

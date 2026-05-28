@@ -1609,3 +1609,53 @@ body {
 @media (min-width: 768px) {
   .sticky-cta { display: none; }
 }
+
+/* ============================================================
+   サンクスページ: カレンダー埋め込み導線
+   ============================================================ */
+.thanks-lead-cta {
+  background: linear-gradient(135deg, rgba(51, 102, 255, 0.08), rgba(30, 58, 138, 0.08));
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 0 auto 12px;
+  font-size: 0.92rem;
+  color: var(--dark-blue);
+  line-height: 1.7;
+  position: relative;
+}
+.thanks-lead-cta strong {
+  font-size: 1rem;
+  color: var(--dark-blue);
+}
+.thanks-lead-cta span {
+  font-size: 0.78rem;
+  color: var(--text-light);
+}
+.thanks-lead-cta::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid rgba(51, 102, 255, 0.12);
+}
+.thanks-card--compact {
+  padding: 28px 22px;
+}
+@media (min-width: 640px) {
+  .thanks-card--compact { padding: 32px 36px; }
+}
+.thanks-card--compact .thanks-message {
+  margin-bottom: 18px;
+}
+.thanks-section--lead {
+  padding-bottom: 8px;
+}
+.thanks-section--secondary {
+  padding-top: 8px;
+}
+
